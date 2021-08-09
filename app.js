@@ -32,6 +32,6 @@ app.use(historyFallback());
 app.use(serve(path.resolve("static")));
 
 app.listen(3499, () => {
-    console.log("程序启动成功");
+    console.log("程序启动成功 ");
     console.log("http://localhost:3499/");
 });
