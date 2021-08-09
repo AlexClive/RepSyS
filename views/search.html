@@ -1,0 +1,56 @@
+<%- include('public/header.html'); -%>
+<link rel="stylesheet" href="css/search.css">
+<div class="Med_item_search">
+    <div class="Med_item_header_search_box">
+        <div class="Med_search">
+            <%- include('public/unit/search.html'); -%>
+        </div>
+    </div>
+
+    <div class="Med_item_search_context">
+        <div class="Med_item_search_context_left">
+            <div class="history">
+                <h1 class="title">检索历史</h1>
+                <table>
+                    <thead>
+                    <tr>
+                        <td>序号</td>
+                        <td>检索记录</td>
+                        <td>结果</td>
+                        <td>操作</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>01</td>
+                        <td>李兆申</td>
+                        <td>30000</td>
+                        <td>
+                            <button>查看</button>
+                        </td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="HOT_charts">
+                <h1 class="title">热门搜索关键词</h1>
+                <%- include('public/charts/hotSearchCharts.html'); -%>
+            </div>
+        </div>
+        <div class="Med_item_search_context_right">
+            <div class="item">
+                <div class="title">
+                    <h1>主题概述</h1>
+                </div>
+                <ul class="context">
+                    <%for(var i = 0; i < 10; i++){%>
+                    <li><a href="#"><i class="IconFont"></i> <span>艾滋病诊疗指南第三版（2015）</span></a></li>
+                    <%}%>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include('public/Footer.html'); -%>
+

@@ -1,0 +1,344 @@
+.Med_item_list {
+  .Med_item_header_search_box {
+    width: 100%;
+    background: #f5f5f5;
+
+    .Med_search {
+      width: 1200px;
+      margin: 0 auto;
+      padding: 0 0 36px 0;
+    }
+  }
+
+  .Med_item_list_context {
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+
+    .Med_item_filter {
+      width: 310px;
+      float: left;
+
+      .item {
+        margin: 20px 0 0 0;
+        border: solid 1px #cccccc;
+
+        .title {
+          padding: 16px;
+          background-image: linear-gradient(#f5f5f5, #f5f5f5),
+          linear-gradient(#dadada, #dadada);
+          background-blend-mode: normal, normal;
+
+          h1 {
+            border-left: 3px solid #dadada;
+            font-family: AdobeHeitiStd-Regular;
+            font-size: 22px;
+            color: #999999;
+            padding: 0 0 0 15px;
+          }
+        }
+
+        .context {
+          padding: 16px;
+
+          .term {
+            padding: 0 0 10px 0;
+
+            span.text {
+              font-family: AdobeHeitiStd-Regular;
+              font-size: 14px;
+              color: #333333;
+            }
+
+            span.num {
+              line-height: 26px;
+            }
+          }
+
+          .filter_btn {
+            width: 255px;
+            height: 34px;
+            margin: 10px auto 0 auto;
+            display: block;
+            border: 0;
+            background-color: #cc2876;
+            border-radius: 5px;
+            color: #ffffff;
+            font-family: AdobeHeitiStd-Regular;
+            font-size: 14px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .Med_item_list_context_right {
+      float: left;
+      margin: 20px 0 0 28px;
+      width: 862px;
+
+      .search_show {
+        overflow: hidden;
+
+        span {
+          display: block;
+          float: left;
+          font-family: AdobeHeitiStd-Regular;
+          font-size: 14px;
+          color: #666666;
+          vertical-align: middle;
+          line-height: 31px;
+
+          &.text {
+            padding: 0 10px;
+            width: 680px;
+          }
+        }
+
+        .operating {
+          float: left;
+
+
+          button {
+            width: 48px;
+            height: 30px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            border: solid 1px #cc2876;
+            font-family: AdobeHeitiStd-Regular;
+            font-size: 14px;
+            color: #cc2876;
+            cursor: pointer;
+
+            &.btn-handle {
+              width: 30px;
+              vertical-align: middle;
+
+              i.IconFont {
+                width: 20px;
+                height: 17px;
+                background-position: 2px -83px;
+                cursor: pointer;
+              }
+
+              &.active {
+                i.IconFont {
+                  height: 15px;
+                  background-position: 2px -100px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .Sort {
+        height: 48px;
+        padding: 0 10px;
+        line-height: 48px;
+        background-color: #f5f5f5;
+        border-top: 1px solid #dadada;
+        font-family: AdobeHeitiStd-Regular;
+        font-size: 14px;
+        color: #666666;
+
+        span {
+          margin: 0 5px;
+          display: inline-block;
+          padding: 8px 10px;
+          line-height: 1;
+          cursor: pointer;
+
+          &.active {
+            background-color: #cc2876;
+            border-radius: 5px;
+            color: #ffffff;
+          }
+        }
+      }
+
+      .Mod_toolbar_filtrate {
+        height: 30px;
+        padding: 10px 0;
+        .filter_box {
+          float: right;
+          label {
+            font-family: AdobeHeitiStd-Regular;
+            font-size: 14px;
+            color: #666666;
+            margin: 0 5px 0 20px;
+          }
+
+          div {
+            display: inline-block;
+            width: 77px;
+            padding: 0 10px;
+            height: 30px;
+            line-height: 30px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            border: solid 1px #cccccc;
+            position: relative;
+            cursor: pointer;
+            &:hover{
+              border-bottom: none;
+              border-radius: 5px 5px 0 0;
+            }
+            &:hover ul{
+              display: block;
+            }
+
+            span {
+              font-family: AdobeHeitiStd-Regular;
+              font-size: 14px;
+              color: #666666;
+              vertical-align: middle;
+            }
+
+            i {
+              font-family: SimSun;
+              font-size: 18px;
+              font-weight: bold;
+              color: #666666;
+              float: right;
+              -moz-transform: matrix(0, 1, -1, 0, 0, 0);
+              -webkit-transform: matrix(0, 1, -1, 0, 0, 0);
+              -ms-transform: matrix(0, 1, -1, 0, 0, 0);
+              vertical-align: middle;
+              margin: 3px 0 0 0;
+            }
+
+            ul {
+              width: 100%;
+              position: absolute;
+              left: -1px;
+              top: 29px;
+              border: 1px solid #cccccc;
+              border-radius: 0 0 5px 5px;
+              display: none;
+              font-family: AdobeHeitiStd-Regular;
+              font-size: 14px;
+              color: #666666;
+              vertical-align: middle;
+              z-index: 40;
+              li {
+                padding: 0 11px;
+
+                &:hover {
+                  background: rgba(245, 245, 245, 0.8);
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .Med_item_list_data{
+        li{
+          padding: 24px  10px;
+          border-bottom: 1px solid #dadada;
+          p{
+            font-family: AdobeHeitiStd-Regular;
+            font-size: 16px;
+            color: #333333;
+            line-height: 56px;
+            span{
+              font-family: AdobeHeitiStd-Regular;
+              font-size: 18px;
+              color: #cc2876;
+            }
+          }
+          div{
+            text-align: justify;
+            overflow: hidden;
+            line-height: 24px;
+            color: #999999;
+            font-family: AdobeHeitiStd-Regular;
+            font-size: 14px;
+            label{
+              min-width: 62px;
+              display: block;
+              float: left;
+            }
+            span{
+              max-width: 715px;
+              display: block;
+              float: left;
+            }
+            a{
+              color: #999999;
+            }
+          }
+        }
+      }
+      .list_info {
+        padding: 20px 0;
+        overflow: hidden;
+
+        .info {
+          float: left;
+          font-family: AdobeHeitiStd-Regular;
+          font-size: 14px;
+          color: #666666;
+          line-height: 36px;
+        }
+
+        .pagination {
+          float: right;
+
+          a {
+            display: inline-block;
+            width: 34px;
+            height: 34px;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            border: solid 1px #dadada;
+            text-align: center;
+            line-height: 34px;
+            margin: 0 5px;
+            color: #666666;
+            font-size: 16px;
+
+            &.prev, &.next {
+              font-family: "Simsun";
+              font-weight: bold;
+            }
+          }
+
+          .active {
+            display: inline-block;
+            width: 34px;
+            height: 34px;
+            text-align: center;
+            line-height: 34px;
+            background-color: #cc2876;
+            border-radius: 5px;
+            font-family: AdobeHeitiStd-Regular;
+            font-size: 16px;
+            color: #ffffff;
+          }
+
+          .jump-ipt {
+            width: 60px;
+            height: 34px;
+            padding: 0 10px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            border: solid 1px #dadada;
+          }
+
+          .jump-btn {
+            width: 48px;
+            height: 34px;
+            background-color: #cc2876;
+            border-radius: 5px;
+            font-family: AdobeHeitiStd-Regular;
+            font-size: 16px;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+
+}

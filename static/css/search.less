@@ -1,0 +1,159 @@
+@import "publick.css";
+
+.header_item_search {
+  display: none;
+}
+
+.Med_item_search {
+  width: 1200px;
+  margin: 0 auto;
+
+  .Med_item_header_search_box {
+    position: relative;
+    width: 100%;
+    min-height: 123px;
+
+    .Med_search {
+      width: 100%;
+      min-height: 170px;
+      padding: 0 0 20px 0;
+      background-color: #f5f5f5;
+      position: absolute;
+      top: -67px;
+    }
+
+  }
+
+  .Med_item_search_context {
+    overflow: hidden;
+
+    .Med_item_search_context_left {
+      float: left;
+
+      h1.title {
+        font-family: AdobeHeitiStd-Regular;
+        font-size: 22px;
+        color: #999999;
+        border-left: 3px solid #cc2876;
+        padding: 0 0 0 16px;
+        margin: 15px 0;
+      }
+
+      .history {
+        width: 860px;
+        margin: 15px 0;
+
+        table {
+          width: 100%;
+          margin: 0 0 30px 0;
+
+          thead {
+            tr {
+              background-color: #f5f5f5;
+              border-radius: 0px 3px 3px 0px;
+              height: 48px;
+              text-align: center;
+
+              td {
+                border: 1px solid #dddddd;
+                font-family: AdobeHeitiStd-Regular;
+                font-size: 14px;
+                color: #999999;
+                &:first-child{
+                  width: 58px;
+                }
+                &:nth-child(3){
+                  width: 150px;
+                }
+                &:last-child{
+                  width: 120px;
+                }
+              }
+            }
+          }
+
+          tbody {
+            tr {
+              height: 53px;
+              border-bottom: 1px solid #dadada;
+
+              td {
+                font-family: AdobeHeitiStd-Regular;
+                font-size: 18px;
+                color: #c1c1c1;
+
+                &:first-child, &:nth-child(3), &:last-child {
+                  text-align: center;
+
+                  button {
+                    width: 50px;
+                    height: 30px;
+                    background-color: #cc2876;
+                    border-radius: 5px;
+                    border: none;
+                    font-family: AdobeHeitiStd-Regular;
+                    font-size: 14px;
+                    color: #ffffff;
+                    cursor: pointer;
+                  }
+                }
+
+                &:nth-child(2) {
+                  color: #333333;
+                  font-family: AdobeHeitiStd-Regular;
+                  font-size: 16px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .Med_item_search_context_right {
+      float: left;
+      width: 310px;
+      margin: 0 0 0 30px;
+
+      .item {
+        margin: 20px 0 0 0;
+        border: solid 1px #cccccc;
+
+        .title {
+          padding: 16px;
+          border-bottom: 1px solid #dadada;
+
+          h1 {
+            border-left: 3px solid #dadada;
+            font-family: AdobeHeitiStd-Regular;
+            font-size: 22px;
+            color: #999999;
+            padding: 0 0 0 15px;
+          }
+        }
+
+        .context {
+          padding: 15px;
+
+          li {
+            font-family: AdobeHeitiStd-Regular;
+            font-size: 14px;
+            line-height: 24px;
+            color: #333333;
+            padding: 0 0 11px 0;
+
+            a {
+              color: #333333;
+
+              i.IconFont {
+                width: 6px;
+                height: 10px;
+                background-position: -2px -205px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

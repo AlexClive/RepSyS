@@ -1,0 +1,104 @@
+<%- include('public/header.html'); -%>
+<link rel="stylesheet" href="css/list.css">
+<div class="Med_item_list">
+    <div class="Med_item_header_search_box">
+        <div class="Med_search">
+            <%- include('public/unit/search.html'); -%>
+        </div>
+    </div>
+
+    <div class="Med_item_list_context">
+        <div class="Med_item_filter">
+            <% for(var i =0; i < filter.length; i++){%>
+            <div class="item">
+                <div class="title">
+                    <h1><%= filter[i]["title"]%></h1>
+                </div>
+                <div class="context">
+                    <%for(var j = 0; j < filter[i]["list"].length; j++){%>
+                    <div class="term check">
+                        <label><i class="IconFont"></i></label>
+                        <input type="checkbox">
+                        <span class="text"><%=filter[i]["list"][j]["title"]%></span>
+                        <span class="num"><%=filter[i]["list"][j]["count"]%></span>
+                    </div>
+                    <%}%>
+                    <button class="filter_btn">筛选</button>
+                </div>
+            </div>
+            <%}%>
+        </div>
+        <div class="Med_item_list_context_right">
+            <div class="search_show">
+                <span class="title">当前检索式:</span>
+                <span class="text">运动如何调控"肌-骨"Crosstalk分泌相关因子表达介导2型糖尿病的骨代Crosstalk分泌相关因子表达介导2型糖尿病的骨代</span>
+                <div class="operating">
+                    <button class="btn-handle"><i class="IconFont"></i></button>
+                    <button>收藏</button>
+                </div>
+
+            </div>
+            <div class="Sort">
+                <label>排序方式:</label>
+                <span class="active">出版时间</span><span>相关度</span><span>被引用次数</span>
+            </div>
+            <div class="Mod_toolbar_filtrate">
+                <div class="filter_box">
+                    <label>全文情况:</label>
+                    <div><span>全部</span><i> > </i>
+                        <ul>
+                            <li>全部</li>
+                            <li>万方全文</li>
+                            <li>外部全文</li>
+                            <li>原文传递</li>
+                        </ul>
+                    </div>
+                    <label>每页显示:</label>
+                    <div><span>10篇</span><i> > </i>
+                        <ul>
+                            <li>10篇</li>
+                            <li>20篇</li>
+                            <li>30篇</li>
+                            <li>40篇</li>
+                            <li>50篇</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <ul class="Med_item_list_data">
+                <%for(var i = 0; i < 11; i++){%>
+                <li>
+                    <p><span><%= i < 10 ? ("0"+i): i %></span> 多囊卵巢综合征患者肠道菌群和生化免疫分子特征</p>
+                    <div><label>【中文期刊】</label> <span>汪湾 尚潇潇 曾秋耀 刘冬冬 李贝贝 张嘉琪 杨洪艳 黄译乐 胡薇 傅锦坚 徐建华</span></div>
+                    <div><label>《微生物学报》</label>  <span>2021年61卷2期 452-468页 被引0次 MEDLINEISTICPKUCSCDCABP</span></div>
+                    <div><label>【摘要】</label> <span> [目的]比较多囊卵巢综合征(polycystic ovarian syndrome,PCOS)患者与健康对照间肠道菌群谱结构特征差异,并探讨多囊卵巢综</span></div>
+                    <div><label>【关键词】</label> <a href="#">多囊卵巢综合征； </a><a href="#">肠道菌群；</a> <a href="#">生化；</a></div>
+                </li>
+                <%}%>
+            </ul>
+            <div class="list_info">
+                <div class="info">共找到1564条结果 <span class="pageSize">1</span>/125</div>
+                <div class="pagination"></div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<%- include('public/Footer.html'); -%>
+<script type="text/javascript" src="js/pagination.min.js"></script>
+<script>
+    /*分页*/
+    $('.pagination').pagination({
+        mode: 'fixed',
+        totalData: 100,
+        showData: 5,
+        jump: true,
+        jumpBtn: '跳到',
+        callback: function (api) {
+            console.log(api.getCurrent());
+            $(".pageSize").text(api.getCurrent());
+        }
+    })
+</script>

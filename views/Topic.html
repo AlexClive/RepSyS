@@ -1,0 +1,184 @@
+<%- include('public/header.html'); -%>
+<link rel="stylesheet" href="css/topic.css">
+<script type="text/javascript" src="js/echarts.min.js"></script>
+<div class="Med_item_topic">
+    <div class="Med_item_topic_list">
+        <div class="Med_item_topic_title">
+            <i class="IconFont"></i>
+            <span>生殖理论</span>
+        </div>
+    </div>
+
+    <div class="Med_item_topic_context">
+
+        <div class="Med_item_topic_context_list">
+            <%for(var i = 0; i < classify.length; i++){%>
+            <div class="Med_item_topic_context_classify">
+                <label><%=classify[i]["title"]%>:</label>
+                <ul class="classify">
+                    <%for(var j =0 ;j< classify[i]["list"].length; j++){%>
+                    <% var cName = j == 0 ?'active':''%>
+                    <li class="<%=cName %>"><%= classify[i]["list"][j]%> <i class="IconFont"></i></li>
+                    <%}%>
+                </ul>
+                <div class="more"><i class="IconFont"></i></div>
+            </div>
+            <%}%>
+            <div class="Med_item_topic_context_data">
+                <div class="sort">
+                    <label>排序方式:</label>
+                    <span class="active">出版时间</span><span>相关度</span>
+                </div>
+                <ul class="item">
+                    <% for(var i =0; i < 10;i++){%>
+                    <li>
+                        <label><%if(i+1>9){%><%=(i+1)%><%}else{%><%="0"+(i+1)%> <%}%></label>
+                        <div class="detail">
+                            <p>
+                                多囊卵巢综合征患者肠道菌群和生化免疫分子特征
+                            </p>
+                            <div>
+                                <span>【中文期刊】</span>
+                                <span>汪湾 尚潇潇 曾秋耀 刘冬冬 李贝贝 张嘉琪 杨洪艳 黄译乐 胡薇 傅锦坚 徐建华</span>
+                            </div>
+                            <div>
+                                <span>《微生物学报》</span>
+                                <span>2021年61卷2期 452-468页 被引0次 MEDLINEISTICPKUCSCDCABP</span>
+                            </div>
+                            <div>
+                                <span>【摘要】</span>
+                                <span> [目的]比较多囊卵巢综合征(polycystic ovarian syndrome,PCOS)患者与健康对照间肠道菌群谱结构特征差异,并探讨多囊卵巢综
+                   合征患者差异菌群与生化免疫指标之间的联系.[方法]选取初诊多囊......</span>
+                            </div>
+                            <div>
+                                <span>【关键词】</span>
+                                <span> 多囊卵巢综合征； 肠道菌群； 生化；</span>
+                            </div>
+                        </div>
+
+
+                    </li>
+                    <%}%>
+                </ul>
+                <div class="list_info">
+                    <div class="info">共找到1564条结果 <span class="pageSize">1</span>/125</div>
+                    <div class="pagination"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="Med_item_topic_context_facet">
+            <div class="item">
+                <div class="title">
+                    <h1>主题概述</h1>
+                </div>
+                <div class="context">
+                    <p>
+                        多囊卵巢综合征是一种生殖功能障碍与代谢异常并存的内分泌紊乱综合征，是生育期妇女月经紊乱最常见的原因。临床以闭经、不孕、功血、多毛、肥胖为特征，伴高胰岛素血症及胰岛素抵抗。
+                    </p>
+                    <p>
+                        多囊卵巢综合征是一种生殖功能障碍与代谢异常并存的内分泌紊乱综合征，是生育期妇女月经紊乱最常见的原因。临床以闭经、不孕、功血、多毛、肥胖为特征，伴高胰岛素血症及胰岛素抵抗。
+                    </p>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="title">
+                    <h1>相关疾病</h1>
+                </div>
+                <div class="context">
+                    <% for(var i =0; i < 10; i++){ %>
+                    <a href="#">畸形瘤</a>
+                    <% }%>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="title">
+                    <h1>学者云图</h1>
+                </div>
+                <div class="context">
+                    <div class="scholarCharts">
+                        <%- include('public/charts/scholarCharts.html'); -%>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="title">
+                    <h1>机构云图</h1>
+                </div>
+                <div class="context">
+                    <div class="agencyCharts">
+                    <%- include('public/charts/agencyCharts.html'); -%>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="item_bg">
+                    <img src="images/learning.png" alt="学术萌芽查新">
+                    <a href="#">学术萌芽查新 <i class="IconFont"></i></a>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="item_bg">
+                    <img src="images/direction.png" alt="确定研究方向">
+                    <a href="#">确定研究方向 <i class="IconFont"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<%- include('public/Footer.html'); -%>
+<script type="text/javascript" src="js/pagination.min.js"></script>
+<script>
+    /*展开筛选*/
+    $(".more").on('click', function () {
+        var _that = $(this);
+        var child = _that.children('i.IconFont');
+        if (!child.hasClass("active")) {
+            _that.children('i.IconFont').addClass("active");
+            _that.parents().children(".classify").height("auto");
+        } else {
+            _that.children('i.IconFont').removeClass("active");
+            _that.parents().children(".classify").height(39);
+        }
+    });
+    /*筛选*/
+    $(".classify").on('click', 'li', function () {
+        var _that = $(this);
+        var idx = _that.index();
+        if (idx != 0) {
+            _that.addClass("active");
+            _that.parents().children().eq(0).removeClass("active");
+        } else {
+            _that.addClass("active").siblings().removeClass("active");
+        }
+        return false;
+    });
+    $(".classify").on('click', 'li i', function () {
+        var _that = $(this);
+        _that.parents().removeClass("active");
+        return false;
+    });
+
+
+    /*分页*/
+    $('.pagination').pagination({
+        mode: 'fixed',
+        totalData: 100,
+        showData: 5,
+        jump: true,
+        jumpBtn: '跳到',
+        callback: function (api) {
+            console.log(api.getCurrent());
+            $(".pageSize").text(api.getCurrent());
+        }
+    })
+</script>

@@ -1,0 +1,54 @@
+<%- include('public/header.html'); -%>
+<link rel="stylesheet" href="css/resourceList.css">
+<div class="resourceList">
+    <div class="Med_item_resourceList">
+        <ul class="tab">
+            <li class="active"><span>知识库</span><i class="IconFont"></i></li>
+            <li><span>学者空间</span><i class="IconFont"></i></li>
+            <li><span>机构空间</span><i class="IconFont"></i></li>
+        </ul>
+    </div>
+    <div class="Med_item_Context">
+        <div class="repository tabList">
+            <ul>
+                <%for(var i =0 ; i < 50; i++){%>
+                <li><a href="#">北京大学第三医院</a></li>
+                <%}%>
+            </ul>
+        </div>
+        <div class="scholar tabList">
+            <div class="operating">
+                <div class="Med_item_scholar_context_classify">
+                    <label>学者所在地:</label>
+                    <ul class="classify">
+                        <li class="active">北京 <i class="IconFont"></i></li>
+                    </ul>
+                    <div class="more"><i class="IconFont"></i></div>
+                </div>
+                <div class="Med_item_resourceList_sort">
+                    <div class="sort_box">
+                        <span>按总发文数排序</span><i> > </i>
+                        <ul>
+                            <li>按总发文数排序</li>
+                            <li>按第一作者发文排序</li>
+                            <li>按总被引次数排序</li>
+                        </ul>
+                    </div>
+                    <div class="count">共1456465条检索结果</div>
+                </div>
+            </div>
+            <table class="scholar_context">
+
+            </table>
+        </div>
+    </div>
+</div>
+<%- include('public/Footer.html'); -%>
+<script type="text/javascript">
+    $(".Med_item_resourceList .tab").on('click', 'li', function () {
+        var _that = $(this);
+        var idx = _that.index();
+        _that.addClass("active").siblings().removeClass("active");
+        $(".Med_item_Context div.tabList").eq(idx).show().siblings().hide();
+    })
+</script>

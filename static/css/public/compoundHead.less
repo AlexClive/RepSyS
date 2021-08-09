@@ -1,0 +1,163 @@
+@import "../publick.css";
+.header {
+  width: 100%;
+  height: 661px;
+  background: url("../../images/CompoundHead.png")no-repeat center;
+  background-size: 100% 100%;
+
+  .header_item_nav {
+    height: 65px;
+    padding: 0 100px;
+    border-bottom: 1px solid #8068a4;
+
+    .header_item_box {
+      width: 100%;
+      height: 100%;
+      .logo {
+        height: 100%;
+        line-height: 65px;
+        float: left;
+        .elelady {
+          display: inline-block;
+          height: 51px;
+          margin: 0 34px 0 0;
+          vertical-align: middle;
+        }
+
+        .med {
+          height: 32px;
+          vertical-align: middle;
+        }
+      }
+
+      .header_list_nav{
+        float: left;
+        margin: 0 0 0 80px;
+        li{
+          float: left;
+          height: 65px;
+          line-height: 64px;
+          font-family: AdobeHeitiStd-Regular;
+          font-size: 16px;
+          color: #ffffff;
+          margin: 0 20px;
+          cursor: pointer;
+          a{
+            display: block;
+            color: #ffffff;
+            text-decoration: none;
+            font-family: AdobeHeitiStd-Regular;
+            font-size: 16px;
+          }
+
+          i{
+            display: block;
+            width: 100%;
+            height: 3px;
+            background-color: #cc2876;
+            display: none;
+          }
+          &.active{
+            i{
+              display: block;
+            }
+          }
+        }
+      }
+
+      .MedUserInfo{
+        float: right;
+        color: #ffffff;
+        height: 65px;
+        line-height: 65px;
+      }
+    }
+  }
+
+  .header_item_context{
+    width: 1200px;
+    margin: 36px auto;
+    h1{
+      font-family: AdobeHeitiStd-Regular;
+      font-size: 52px;
+      font-weight: bold;
+      color: #cac5d4;
+      text-align: center;
+      text-shadow: 1px -10px 2px rgba(45, 18, 96, 0.9); /*ff*/
+      filter: DropShadow(Color=2d1260, OffX=1, OffY=-10, Positive=true);
+      filter: Shadow(Color=2d1260,Direction=180);
+      letter-spacing: 5px;
+    }
+
+    .header_item_search{
+        margin: 27px 0 0 0;
+      .header_item_search_shadow{
+        padding: 11px;
+        height: 100%;
+        background: rgba(225,225,225,.2);
+        position: relative;
+        input[type=text]{
+          width: 962px;
+          height: 44px;
+          padding: 0 74px 0 20px;
+          background: #ffffff;
+          border: none;
+        }
+        .header_search_btn{
+          width: 54px;
+          height: 46px;
+          background-color: #cc2876;
+          border-radius: 0 5px 5px 0;
+          border: none;
+          position: absolute;
+          right: 131px;
+          cursor: pointer;
+          i.search{
+            width: 33px;
+            height: 33px;
+            background-position: -4px -2px;
+          }
+        }
+        a{
+          display: inline-block;
+          text-align: center;
+          width: 102px;
+          height: 46px;
+          line-height: 46px;
+          background-color: #32acc9;
+          border-radius: 5px;
+          font-family: AdobeHeitiStd-Regular;
+          font-size: 16px;
+          color: #ffffff;
+          text-decoration:none;
+          margin: 0 0 0 10px;
+        }
+      }
+    }
+  }
+
+  .Introduction{
+    width: 1200px;
+    margin: 0 auto;
+    h1{
+      font-family: AdobeHeitiStd-Regular;
+      font-size: 30px;
+      color: #c7bbf0;
+      border-left: 3px solid #cc2876;
+      padding: 0 0 0 8px;
+      margin: 66px 0 0 0;
+    }
+    div{
+      width: 466px;
+      padding: 27px 0 0 0;
+      color: #cabff7;
+      font-family: AdobeHeitiStd-Regular;
+      font-size: 16px;
+      line-height: 2;
+      text-indent: 2em;
+      text-align: justify;
+    }
+  }
+
+}
+

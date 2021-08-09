@@ -1,0 +1,135 @@
+@import "publick.css";
+.header_item_search {
+  display: none;
+}
+.Med_item_search {
+  width: 1200px;
+  margin: 0 auto;
+}
+.Med_item_search .Med_item_header_search_box {
+  position: relative;
+  width: 100%;
+  min-height: 123px;
+}
+.Med_item_search .Med_item_header_search_box .Med_search {
+  width: 100%;
+  min-height: 170px;
+  padding: 0 0 20px 0;
+  background-color: #f5f5f5;
+  position: absolute;
+  top: -67px;
+}
+.Med_item_search .Med_item_search_context {
+  overflow: hidden;
+}
+.Med_item_search .Med_item_search_context .Med_item_search_context_left {
+  float: left;
+}
+.Med_item_search .Med_item_search_context .Med_item_search_context_left h1.title {
+  font-family: AdobeHeitiStd-Regular;
+  font-size: 22px;
+  color: #999999;
+  border-left: 3px solid #cc2876;
+  padding: 0 0 0 16px;
+  margin: 15px 0;
+}
+.Med_item_search .Med_item_search_context .Med_item_search_context_left .history {
+  width: 860px;
+  margin: 15px 0;
+}
+.Med_item_search .Med_item_search_context .Med_item_search_context_left .history table {
+  width: 100%;
+  margin: 0 0 30px 0;
+}
+.Med_item_search .Med_item_search_context .Med_item_search_context_left .history table thead tr {
+  background-color: #f5f5f5;
+  border-radius: 0px 3px 3px 0px;
+  height: 48px;
+  text-align: center;
+}
+.Med_item_search .Med_item_search_context .Med_item_search_context_left .history table thead tr td {
+  border: 1px solid #dddddd;
+  font-family: AdobeHeitiStd-Regular;
+  font-size: 14px;
+  color: #999999;
+}
+.Med_item_search .Med_item_search_context .Med_item_search_context_left .history table thead tr td:first-child {
+  width: 58px;
+}
+.Med_item_search .Med_item_search_context .Med_item_search_context_left .history table thead tr td:nth-child(3) {
+  width: 150px;
+}
+.Med_item_search .Med_item_search_context .Med_item_search_context_left .history table thead tr td:last-child {
+  width: 120px;
+}
+.Med_item_search .Med_item_search_context .Med_item_search_context_left .history table tbody tr {
+  height: 53px;
+  border-bottom: 1px solid #dadada;
+}
+.Med_item_search .Med_item_search_context .Med_item_search_context_left .history table tbody tr td {
+  font-family: AdobeHeitiStd-Regular;
+  font-size: 18px;
+  color: #c1c1c1;
+}
+.Med_item_search .Med_item_search_context .Med_item_search_context_left .history table tbody tr td:first-child,
+.Med_item_search .Med_item_search_context .Med_item_search_context_left .history table tbody tr td:nth-child(3),
+.Med_item_search .Med_item_search_context .Med_item_search_context_left .history table tbody tr td:last-child {
+  text-align: center;
+}
+.Med_item_search .Med_item_search_context .Med_item_search_context_left .history table tbody tr td:first-child button,
+.Med_item_search .Med_item_search_context .Med_item_search_context_left .history table tbody tr td:nth-child(3) button,
+.Med_item_search .Med_item_search_context .Med_item_search_context_left .history table tbody tr td:last-child button {
+  width: 50px;
+  height: 30px;
+  background-color: #cc2876;
+  border-radius: 5px;
+  border: none;
+  font-family: AdobeHeitiStd-Regular;
+  font-size: 14px;
+  color: #ffffff;
+  cursor: pointer;
+}
+.Med_item_search .Med_item_search_context .Med_item_search_context_left .history table tbody tr td:nth-child(2) {
+  color: #333333;
+  font-family: AdobeHeitiStd-Regular;
+  font-size: 16px;
+}
+.Med_item_search .Med_item_search_context .Med_item_search_context_right {
+  float: left;
+  width: 310px;
+  margin: 0 0 0 30px;
+}
+.Med_item_search .Med_item_search_context .Med_item_search_context_right .item {
+  margin: 20px 0 0 0;
+  border: solid 1px #cccccc;
+}
+.Med_item_search .Med_item_search_context .Med_item_search_context_right .item .title {
+  padding: 16px;
+  border-bottom: 1px solid #dadada;
+}
+.Med_item_search .Med_item_search_context .Med_item_search_context_right .item .title h1 {
+  border-left: 3px solid #dadada;
+  font-family: AdobeHeitiStd-Regular;
+  font-size: 22px;
+  color: #999999;
+  padding: 0 0 0 15px;
+}
+.Med_item_search .Med_item_search_context .Med_item_search_context_right .item .context {
+  padding: 15px;
+}
+.Med_item_search .Med_item_search_context .Med_item_search_context_right .item .context li {
+  font-family: AdobeHeitiStd-Regular;
+  font-size: 14px;
+  line-height: 24px;
+  color: #333333;
+  padding: 0 0 11px 0;
+}
+.Med_item_search .Med_item_search_context .Med_item_search_context_right .item .context li a {
+  color: #333333;
+}
+.Med_item_search .Med_item_search_context .Med_item_search_context_right .item .context li a i.IconFont {
+  width: 6px;
+  height: 10px;
+  background-position: -2px -205px;
+}
+/*# sourceMappingURL=search.css.map */

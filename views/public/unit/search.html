@@ -1,0 +1,131 @@
+<link rel="stylesheet" href="css/unit/search.css">
+    <ul class="search_text">
+        <%for(var i = 0; i < 2;i++){%>
+        <li class="search_text_list">
+            <div class="logic"><span>与</span> <i class="text"> > </i>
+                <ul>
+                    <li>与</li>
+                    <li>或</li>
+                    <li>非</li>
+                </ul>
+            </div>
+            <div class="field"><span>全部字段</span><i class="text"> > </i>
+                <ul>
+                    <li>全部字段</li>
+                    <li>主题</li>
+                    <li>提名</li>
+                    <li>关键词</li>
+                    <li>摘要</li>
+                    <li>作者</li>
+                    <li>作者单位</li>
+                    <li>期刊-刊名</li>
+                    <li>期刊-第一作者</li>
+                </ul>
+            </div>
+            <div class="searchTerm"><input type="text" placeholder="输入检索词"></div>
+            <div class="genre"><span>模糊</span><i class="text"> > </i>
+                <ul>
+                    <li>模糊</li>
+                    <li>精确</li>
+                </ul>
+            </div>
+            <div class="AddCut">
+                <span class="cut"><i class="IconFont"></i></span>
+                <%if(i!= 0){%>
+                <span class="Add"><i class="IconFont"></i></span>
+                <%}%>
+            </div>
+        </li>
+        <%}%>
+    </ul>
+    <div class="search_term_list">
+        <div class="start"><span>开始</span> <i class="text"> > </i>
+            <ul>
+                <%for(var i = 1998; i < 2021;i++){%>
+                <li><%= i%></li>
+                <%}%>
+            </ul>
+        </div>
+        <div class="end"><span>结束</span> <i class="text"> > </i>
+            <ul>
+                <%for(var i = 1998; i < 2021;i++){%>
+                <li><%= i%></li>
+                <%}%>
+            </ul>
+        </div>
+        <div class="resource"><span>全部资源</span> <i class="text"> > </i>
+            <ul>
+
+                <li>全部资源</li>
+                <li>期刊论文</li>
+                <li>学位论文</li>
+                <li>会议论文</li>
+                <li>专利</li>
+                <li>标准</li>
+                <li>法规</li>
+                <li>成果</li>
+            </ul>
+        </div>
+        <div class="fullText check">
+            <label><i class="IconFont"></i></label>
+            <input type="checkbox">
+            <span class="text">提供全文</span>
+        </div>
+        <%if(originalUrl=="/list"){%>
+        <div class="resultInSearch check">
+            <label><i class="IconFont"></i></label>
+            <input type="checkbox">
+            <span  class="text">在当前检索结果中检索</span>
+        </div>
+        <%}%>
+
+        <button class="search_btn">检索</button>
+    </div>
+
+<script type="text/javascript">
+    /*添加*/
+    $(".Med_item_header_search_box").on('click', '.search_text_list .AddCut .Add', function () {
+        $(".Med_search div ul").hide();
+        if ($(".search_text_list").length < 5) {
+            var lastoDom = $(".search_text_list:last").html();
+            $(".search_text").append("<li  class=\"search_text_list\">" + lastoDom + "</li>");
+            var search_text_H = $(".search_text").height() + 67;
+            $(".Med_item_header_search_box").height(search_text_H);
+            $(".search_text_list:last input[type=text]").val("");
+        }
+    });
+    /*删除*/
+    $(".Med_item_header_search_box").on('click', '.search_text_list .AddCut .cut', function (event) {
+        $(".Med_search div ul").hide();
+        if ($(".search_text_list").length > 2) {
+            var _that = $(this);
+            _that.parent().parent().remove();
+        }
+        event.stopPropagation();
+    });
+    /*条件筛选*/
+    $(".Med_item_header_search_box").on('click', '.Med_search div', function (event) {
+        var _that = $(this);
+        var _pare = _that.children("ul");
+        if (_pare.is(":hidden")) {
+            $(".Med_search div ul").hide();
+            _pare.show();
+        } else {
+            _pare.hide();
+        }
+        event.stopPropagation();
+    });
+
+    $(".Med_item_header_search_box").on('click', '.Med_search div ul li', function () {
+        var _that = $(this);
+        _that.parent().parent().children("span").text(_that.text());
+    });
+
+    $("body").on('click', function () {
+        $(".Med_item_header_search_box .Med_search div ul").each(function () {
+            if (!$(this).is(":hidden")) {
+                $(this).hide();
+            }
+        });
+    })
+</script>

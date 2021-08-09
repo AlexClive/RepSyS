@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%=publicDate.title %></title>
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/public/compoundHead.css">
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<div class="header">
+    <div class="header_item_nav">
+        <div class="header_item_box">
+            <div class="logo">
+                <img src="images/elelady.png" alt="ELELADY" class="elelady">
+                <a href="#"><img src="images/med.png" alt="万方数据" class="med"></a>
+            </div>
+            <ul class="header_list_nav">
+                <% for(var i = 0; i < publicDate.navList.length; i++){%>
+                <% var cName =  originalUrl == publicDate.navList[i]['address'] ? 'active':''%>
+                <li class="<%=cName %>"><a href="<%= publicDate.navList[i]['address']%>"><%= publicDate.navList[i]["title"]%></a><i></i> </li>
+                <%}%>
+            </ul>
+            <div class="MedUserInfo">欢迎 <span class="info"><%=publicDate.userInfo %></span></div>
+        </div>
+        <div class="header_item_context">
+            <h1><%=publicDate.title %></h1>
+            <div class="header_item_search">
+                <div class="header_item_search_shadow">
+                    <input type="text" class="med_search_text">
+                    <button class="header_search_btn"><i class="IconFont search"></i></button>
+                    <a href="/search">高级检索</a>
+                </div>
+            </div>
+        </div>
+        <div class="Introduction">
+            <h1><%=Introduction.title %></h1>
+            <div><%=Introduction.context %></div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/header_search.js"></script>

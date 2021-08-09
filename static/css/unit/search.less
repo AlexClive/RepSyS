@@ -1,0 +1,152 @@
+.search_text {
+  padding: 20px 0 0 0;
+
+  li {
+    height: 34px;
+    padding: 15px 0 0 0;
+    z-index: 10;
+  }
+}
+
+.search_term_list {
+  padding: 15px 0 0 0;
+  height: 34px;
+}
+
+.search_text, .search_term_list {
+  div {
+    float: left;
+    height: 32px;
+    padding: 0 5px 0 0;
+    line-height: 30px;
+    border-bottom: 1px solid #dadada;
+    cursor: pointer;
+    margin: 0 12px 0 15px;
+    font-family: AdobeHeitiStd-Regular;
+    font-size: 14px;
+    color: #666666;
+    position: relative;
+
+    ul {
+      position: absolute;
+      z-index: 100;
+      width: 100%;
+      background: #fff;
+      border: 1px solid #dadada;
+      border-radius: 0 0 3px 3px;
+      max-height: 200px;
+      display: none;
+      overflow-y: auto;
+
+      li {
+        padding: 0 10px;
+        height: 26px;
+        line-height: 26px;
+
+        &:hover {
+          background: rgba(245, 245, 245, .8);
+        }
+      }
+    }
+
+    i.text {
+      font-family: SimSun;
+      font-size: 18px;
+      font-weight: bold;
+      color: #666666;
+      float: right;
+      -moz-transform: matrix(0, 1, -1, 0, 0, 0);
+      -webkit-transform: matrix(0, 1, -1, 0, 0, 0);
+      -ms-transform: matrix(0, 1, -1, 0, 0, 0);
+    }
+
+    &.logic {
+      width: 90px;
+      cursor: pointer;
+    }
+
+    &.field {
+      width: 120px;
+    }
+
+    &.searchTerm {
+      width: 642px;
+
+      input {
+        width: 100%;
+        height: 30px;
+        border: none;
+        background-color: #f5f5f5;
+      }
+    }
+
+    &.genre {
+      width: 95px;
+    }
+
+    &.AddCut {
+      border: none;
+
+      span {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        background-color: #ffffff;
+        border-radius: 5px;
+        border: solid 1px #cc2876;
+        margin: 0 0 0 10px;
+
+        &.cut {
+          i.IconFont {
+            width: 30px;
+            height: 30px;
+            background-position: 8px -132px;
+          }
+        }
+
+        &.Add {
+          i.IconFont {
+            width: 30px;
+            height: 30px;
+            background-position: 9px -156px;
+          }
+        }
+
+      }
+    }
+
+    &.start {
+      width: 90px;
+    }
+
+    &.end {
+      width: 120px;
+    }
+
+    &.resource {
+      width: 188px;
+    }
+
+    &.fullText, &.resultInSearch {
+      border: none;
+    }
+
+    &.resultInSearch {
+      margin: 0 0 0 260px;
+    }
+
+  }
+}
+
+button.search_btn {
+  width: 95px;
+  height: 30px;
+  background-color: #cc2876;
+  border-radius: 5px;
+  border: none;
+  float: right;
+  font-family: AdobeHeitiStd-Regular;
+  font-size: 14px;
+  color: #ffffff;
+  margin: 0 20px;
+}

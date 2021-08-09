@@ -1,0 +1,144 @@
+.search_text {
+  padding: 20px 0 0 0;
+}
+.search_text li {
+  height: 34px;
+  padding: 15px 0 0 0;
+  z-index: 10;
+}
+.search_term_list {
+  padding: 15px 0 0 0;
+  height: 34px;
+}
+.search_text div,
+.search_term_list div {
+  float: left;
+  height: 32px;
+  padding: 0 5px 0 0;
+  line-height: 30px;
+  border-bottom: 1px solid #dadada;
+  cursor: pointer;
+  margin: 0 12px 0 15px;
+  font-family: AdobeHeitiStd-Regular;
+  font-size: 14px;
+  color: #666666;
+  position: relative;
+}
+.search_text div ul,
+.search_term_list div ul {
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #dadada;
+  border-radius: 0 0 3px 3px;
+  max-height: 200px;
+  display: none;
+  overflow-y: auto;
+}
+.search_text div ul li,
+.search_term_list div ul li {
+  padding: 0 10px;
+  height: 26px;
+  line-height: 26px;
+}
+.search_text div ul li:hover,
+.search_term_list div ul li:hover {
+  background: rgba(245, 245, 245, 0.8);
+}
+.search_text div i.text,
+.search_term_list div i.text {
+  font-family: SimSun;
+  font-size: 18px;
+  font-weight: bold;
+  color: #666666;
+  float: right;
+  -moz-transform: matrix(0, 1, -1, 0, 0, 0);
+  -webkit-transform: matrix(0, 1, -1, 0, 0, 0);
+  -ms-transform: matrix(0, 1, -1, 0, 0, 0);
+}
+.search_text div.logic,
+.search_term_list div.logic {
+  width: 90px;
+  cursor: pointer;
+}
+.search_text div.field,
+.search_term_list div.field {
+  width: 120px;
+}
+.search_text div.searchTerm,
+.search_term_list div.searchTerm {
+  width: 642px;
+}
+.search_text div.searchTerm input,
+.search_term_list div.searchTerm input {
+  width: 100%;
+  height: 30px;
+  border: none;
+  background-color: #f5f5f5;
+}
+.search_text div.genre,
+.search_term_list div.genre {
+  width: 95px;
+}
+.search_text div.AddCut,
+.search_term_list div.AddCut {
+  border: none;
+}
+.search_text div.AddCut span,
+.search_term_list div.AddCut span {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: solid 1px #cc2876;
+  margin: 0 0 0 10px;
+}
+.search_text div.AddCut span.cut i.IconFont,
+.search_term_list div.AddCut span.cut i.IconFont {
+  width: 30px;
+  height: 30px;
+  background-position: 8px -132px;
+}
+.search_text div.AddCut span.Add i.IconFont,
+.search_term_list div.AddCut span.Add i.IconFont {
+  width: 30px;
+  height: 30px;
+  background-position: 9px -156px;
+}
+.search_text div.start,
+.search_term_list div.start {
+  width: 90px;
+}
+.search_text div.end,
+.search_term_list div.end {
+  width: 120px;
+}
+.search_text div.resource,
+.search_term_list div.resource {
+  width: 188px;
+}
+.search_text div.fullText,
+.search_term_list div.fullText,
+.search_text div.resultInSearch,
+.search_term_list div.resultInSearch {
+  border: none;
+}
+.search_text div.resultInSearch,
+.search_term_list div.resultInSearch {
+  margin: 0 0 0 260px;
+}
+button.search_btn {
+  width: 95px;
+  height: 30px;
+  background-color: #cc2876;
+  border-radius: 5px;
+  border: none;
+  float: right;
+  font-family: AdobeHeitiStd-Regular;
+  font-size: 14px;
+  color: #ffffff;
+  margin: 0 20px;
+}
+/*# sourceMappingURL=search.css.map */

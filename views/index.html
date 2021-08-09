@@ -1,0 +1,183 @@
+<%- include('public/compoundHead.html'); -%>
+<link rel="stylesheet" href="css/index.css">
+<div class="MedContext">
+    <div class="Med_item">
+        <div class="Med_item_list">
+            <div class="med_item_list_title">
+                <h1>推荐主题</h1>
+                <span>Recommended topics</span>
+            </div>
+            <div class="med_item_list_context">
+                <ul class="topics">
+                    <% for(var i = 0; i < 10; i++){%>
+                    <li>
+                        <a href="#">
+                            <div class="medCont">
+                                <img src="images/speciesDiagram.png" alt="背景图">
+                                <div class="detail">
+                                    <h1>生殖临床</h1>
+                                    <div>
+                                        主要临床表现为月经周期不规律、不孕、多毛和/或痤疮，是最常见的女性内分泌疾病主要临床表现为月经周期不规律、不孕、多毛和/或痤疮，是最常见的女性内分泌疾病
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <%}%>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="Med_item">
+        <div class="Med_item_list">
+            <div class="med_item_list_title_left">
+                <h1>推荐专家</h1>
+                <span>Recommended experts</span>
+                <button>查看更多</button>
+            </div>
+            <div class="Med_item_expert">
+                <div id="expert_main"></div>
+            </div>
+        </div>
+    </div>
+    <div class="Med_item">
+        <div class="Med_item_list">
+
+            <div class="Med_item_expert_Agency">
+                <ul id="Agency_main">
+                    <%for (i = 0; i < 20; i++){%>
+                   <li>
+                       <a href="#">
+                           <i class="mark"></i>
+                           <span>复旦大学附属中山大学</span>
+                       </a>
+                   </li>
+                    <%}%>
+                </ul>
+            </div>
+            <div class="med_item_list_title_left">
+                <h1>推荐机构</h1>
+                <span>Recommended Agency</span>
+                <button>查看更多</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="Med_item">
+        <div class="Med_item_list">
+            <div class="med_item_list_title">
+                <h1>临床科研服务</h1>
+                <span>Clinical  research  service</span>
+            </div>
+            <div class="med_item_list_context">
+                <ul class="service">
+                    <li><a href="#"><img src="images/learning.png" alt=""><span>学术萌芽查新</span></a></li>
+                    <li><a href="#"><img src="images/direction.png" alt=""><span>确定研究方向</span></a></li>
+                    <li><a href="#"><img src="images/data.png" alt=""><span>数据收集</span></a></li>
+                    <li><a href="#"><img src="images/analyze.png" alt=""><span>数据处理与分析</span></a></li>
+                    <li><a href="#"><img src="images/output.png" alt=""><span>研究成果产出</span></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="Med_item_list">
+            <div class="med_item_list_title">
+                <h1>推荐文献</h1>
+                <span>Recommended literature</span>
+            </div>
+            <div class="med_item_list_context">
+                <div class="literature">
+                    <ul class="tab">
+                        <li class="active">知识</li>
+                        <li>文献</li>
+                        <li>视频</li>
+                    </ul>
+                    <div class="context">
+                        <ul class="knowledge_list">
+                            <% for(var i = 0; i < 5; i++){%>
+                            <li>
+                                <a href="#">
+                                    <h1>0<%=(i+1)%></h1>
+                                    <div>
+                                        <p> 多囊卵巢综合征患者肠道菌群和生化免疫分子特征</p>
+                                        <p>期刊：《微生物学报》 — 2021年</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <%}%>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="Med_item_list">
+            <div class="med_item_list_title">
+                <h1>品牌专区</h1>
+                <span>Brand zone</span>
+            </div>
+            <div class="med_item_list_context">
+                <ul class="zone">
+                    <li><img
+                            src="https://cdn.wanfangdata.com.cn/page/css/images/serchIndexIcon_06.png?version=1.2021.58-20210716093449"
+                            alt=""></li>
+                    <li><img
+                            src="https://cdn.wanfangdata.com.cn/page/css/images/serchIndexIcon_06.png?version=1.2021.58-20210716093449"
+                            alt=""></li>
+                    <li><img
+                            src="https://cdn.wanfangdata.com.cn/page/css/images/serchIndexIcon_06.png?version=1.2021.58-20210716093449"
+                            alt=""></li>
+                    <li><img
+                            src="https://cdn.wanfangdata.com.cn/page/css/images/serchIndexIcon_06.png?version=1.2021.58-20210716093449"
+                            alt=""></li>
+                    <li><img
+                            src="https://cdn.wanfangdata.com.cn/page/css/images/serchIndexIcon_06.png?version=1.2021.58-20210716093449"
+                            alt=""></li>
+                    <li><img
+                            src="https://cdn.wanfangdata.com.cn/page/css/images/serchIndexIcon_06.png?version=1.2021.58-20210716093449"
+                            alt=""></li>
+                    <li><img
+                            src="https://cdn.wanfangdata.com.cn/page/css/images/serchIndexIcon_06.png?version=1.2021.58-20210716093449"
+                            alt=""></li>
+                    <li><img
+                            src="https://cdn.wanfangdata.com.cn/page/css/images/serchIndexIcon_06.png?version=1.2021.58-20210716093449"
+                            alt=""></li>
+                    <li><img
+                            src="https://cdn.wanfangdata.com.cn/page/css/images/serchIndexIcon_06.png?version=1.2021.58-20210716093449"
+                            alt=""></li>
+                    <li><img
+                            src="https://cdn.wanfangdata.com.cn/page/css/images/serchIndexIcon_06.png?version=1.2021.58-20210716093449"
+                            alt=""></li>
+                </ul>
+            </div>
+        </div>
+        <div class="Med_item_list">
+            <div class="med_item_list_title">
+                <h1>友情链接</h1>
+                <span>Brand zone</span>
+            </div>
+            <div class="med_item_list_context">
+                <ul class="friendship">
+                    <li><img
+                            src="https://cdn.wanfangdata.com.cn/page/css/images/serchIndexIcon_07.png?version=1.2021.58-20210716093449"
+                            alt=""></li>
+                    <li><img
+                            src="https://cdn.wanfangdata.com.cn/page/css/images/serchIndexIcon_07.png?version=1.2021.58-20210716093449"
+                            alt=""></li>
+                    <li><img
+                            src="https://cdn.wanfangdata.com.cn/page/css/images/serchIndexIcon_07.png?version=1.2021.58-20210716093449"
+                            alt=""></li>
+                    <li><img
+                            src="https://cdn.wanfangdata.com.cn/page/css/images/serchIndexIcon_07.png?version=1.2021.58-20210716093449"
+                            alt=""></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<%- include('public/Footer.html'); -%>
+<script type="text/javascript" src="js/echarts.min.js"></script>
+<script type="text/javascript" src="js/RecomAnExpert_echarts.js"></script>
+
